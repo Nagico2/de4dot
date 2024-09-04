@@ -24,8 +24,3 @@ Remove-Item publish-netcoreapp3.1\*.pdb, publish-netcoreapp3.1\*.xml
 dotnet publish -c Release -f net6.0 -o publish-net6.0 de4dot
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 Remove-Item publish-net6.0\*.pdb, publish-net6.0\*.xml
-
-# Add support for .NET 8
-dotnet publish -c Release -f net8.0 -o publish-net8.0 de4dot
-if ($LASTEXITCODE) { exit $LASTEXITCODE }
-Remove-Item publish-net8.0\*.pdb, publish-net8.0\*.xml
